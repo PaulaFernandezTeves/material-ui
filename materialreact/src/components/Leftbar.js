@@ -1,16 +1,15 @@
 import { makeStyles } from '@material-ui/core/styles';
-import Navbar from './components/Navbar';
 
 const useStyles = makeStyles((theme)=>({
   
 }));
 
 
-const App = () => {
+const Leftbar = () => {
   const classes = useStyles()
   return (
-    <div><Navbar/></div>
+    <div></div>
   );
 };
 
-export default App;
+export default Leftbar;
