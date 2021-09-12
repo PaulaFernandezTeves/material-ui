@@ -4,10 +4,15 @@ import { Grid } from "@material-ui/core";
 import Feed from './components/Feed';
 import Leftbar from './components/Leftbar';
 import Rightbar from './components/Rightbar';
+import Add  from './components/Add';
 
 
 const useStyles = makeStyles((theme)=>({
-  
+  right: {
+    [theme.breakpoints.down('sm')]:{
+      display:'none'
+    }
+  }
 }));
 
 // MIN 55:00
@@ -16,16 +21,17 @@ const App = () => {
   const classes = useStyles();
   return <div><Navbar/>
     <Grid container>
-      <Grid item sm={2}>
+      <Grid item sm={2} xs={2}>
         <Leftbar />
       </Grid>
-      <Grid item sm={7}>
+      <Grid item sm={7} xs={10}>
         <Feed />
       </Grid>
-      <Grid item sm={3}>
+      <Grid item sm={3} className={classes.right}>
         <Rightbar />
       </Grid>
     </Grid>
+    <Add />
     </div>
 };
 
