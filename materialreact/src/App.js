@@ -1,7 +1,8 @@
 import './App.css';
 import React from 'react';
 import RenderizadoElementos from './components/RenderizadoElements';
-import Eventos from './components/Eventos';
+import {EventosES6, EventosES7, MasSobreEventos} from './components/Eventos';
+import ComunicationComponent from './components/ComunicationComponent';
 
 function App() {
   return (
@@ -10,7 +11,13 @@ function App() {
         <section>
           <RenderizadoElementos></RenderizadoElementos>
           <hr></hr>
-          <Eventos/>
+          <EventosES6/>
+          <hr></hr>
+          <EventosES7/>
+          <hr></hr>
+          <MasSobreEventos/>
+          <hr></hr>
+          <ComunicationComponent/>
         </section>
       </header>
     </div>
